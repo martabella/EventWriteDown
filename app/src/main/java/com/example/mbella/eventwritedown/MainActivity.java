@@ -1,9 +1,12 @@
 package com.example.mbella.eventwritedown;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -69,6 +72,37 @@ public class MainActivity extends AppCompatActivity {
             numWomen++;
         }
         this.updateQuantityTextView();
+    }
+
+    /**
+     * This method is called when the submit button is clicked.
+     * Uses an intent to launch an email app.
+     * Sends the quantity summary in the email body.
+     **/
+    public void submitValues(View view){
+        //Get the email subject: EditText name_field text
+        EditText name_field = (EditText)this.findViewById(R.id.name_field);
+        String subject = name_field.getText().toString();
+
+        //Creates the email body
+        String message = numMen+" "+this.getResources().getString(R.string.men)
+                +" / "+numWomen+" "+this.getResources().getString(R.string.women);
+
+        // Use an intent to launch an email app.
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT,subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+
+        //Verifiy if email app is installed in the mobile
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+        /*else {
+            Toast.makeText(this, "no email app", Toast.LENGTH_SHORT).show();
+            Log.i("MAINACTIVITY-submitValues", "subject: " + subject);
+            Log.i("MAINACTIVITY-submitValues", "message: " + message);
+        }*/
     }
 
     /**
