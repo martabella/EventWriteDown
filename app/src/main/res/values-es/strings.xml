@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EventWriteDown</string>
+    <string name="eventName">Introduce el nombre del evento</string>
+    <string name="gender">Género</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+    <string name="men">Hombres</string>
+    <string name="women">Mujeres</string>
+    <string name="quantity">Cantidad</string>
+    <string name="initial_quantity_value">0 Hombres / 0 Mujeres</string>
+    <string name="action_settings">Ajustes</string>
+
+</resources>
