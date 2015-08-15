@@ -110,6 +110,7 @@
                 android:layout_width="@dimen/button_icon_metrics"
                 android:layout_height="@dimen/button_icon_metrics"
                 android:onClick="decrementValues"
+                style="@style/RaisedButtonStyle"
                 android:text="-" />
 
             <Button
@@ -117,6 +118,7 @@
                 android:layout_height="@dimen/button_icon_metrics"
                 android:layout_marginLeft="@dimen/spacing_between_elements"
                 android:onClick="addValues"
+                style="@style/RaisedButtonStyle"
                 android:text="+" />
 
             <ImageButton
