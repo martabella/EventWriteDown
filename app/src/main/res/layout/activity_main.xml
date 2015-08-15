@@ -40,6 +40,7 @@
             android:layout_height="@dimen/single_line_list_height"
             android:gravity="center_vertical"
             android:textAllCaps="true"
+            android:textColor="@color/textColorPrimary"
             android:text="@string/gender" />
 
         <RadioGroup
@@ -52,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="24dp"
                 android:checked="true"
+                android:textColor="@color/textColorSecondary"
                 android:text="@string/male" />
 
             <RadioButton
@@ -59,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:paddingLeft="24dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
                 android:text="@string/female" />
 
         </RadioGroup>
@@ -76,6 +79,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:textAllCaps="true"
+                android:textColor="@color/textColorPrimary"
                 android:text="@string/quantity" />
 
             <TextView
@@ -85,6 +89,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/spacing_between_elements"
                 android:textSize="@dimen/titleTextSize"
+                android:textColor="@color/textColorSecondary"
                 android:gravity="center_vertical"
                 android:text="@string/initial_quantity_value" />
 
