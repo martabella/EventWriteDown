@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
     public void decrementValues(View view){
         RadioButton male_radiobutton = (RadioButton) this.findViewById(R.id.male_radiobutton);
         if (male_radiobutton.isChecked()){
-            numMen--;
+            if (numMen>0) numMen--;
         }else{
             //female_button is checked
-            numWomen--;
+            if (numMen>0) numWomen--;
         }
         this.updateQuantityTextView();
     }

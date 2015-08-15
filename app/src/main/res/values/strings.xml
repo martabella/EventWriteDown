@@ -9,7 +9,7 @@
     <string name="men">Men</string>
     <string name="women">Women</string>
     <string name="quantity">Quantity</string>
-    <string name="initial_quantity_value">0 men / 0 women</string>
+    <string name="initial_quantity_value">0 Men / 0 Women</string>
     <string name="action_settings">Settings</string>
 
 </resources>
